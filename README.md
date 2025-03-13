@@ -3,6 +3,9 @@
 ## Description
 This project generates a website with information about animals fetched from an API.
 
+<img width="1267" alt="Bildschirmfoto 2025-03-13 um 18 25 50" src="https://github.com/user-attachments/assets/7f5e8724-b4d8-40a2-84e2-18f58fe95a2c" />
+
+
 ## Setup
 
 1. Clone the repository:
