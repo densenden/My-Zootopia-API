@@ -1,6 +1,9 @@
 from data_fetcher import fetch_data
 
 def string_creator(animal_data):
+    """
+    Create a string with the animal data to be inserted in the HTML template.
+    """
     animals_string = ""
     for animal in animal_data:
         animals_string += f"""
@@ -39,9 +42,16 @@ def html_replacer(animals_data):
         new_file.write(new_content)
 
 def main():
-    animal_name = "Fox"
-    animal_data = fetch_data(animal_name)
-    html_replacer(animal_data)
+    while True:
+        animal_name = input("Enter a name of an animal: ")
+        animal_data = fetch_data(animal_name)
+        if animal_data:
+            html_replacer(animal_data)
+            print(f"Website was successfully generated to the file animals.html for {animal_name}.")
+            break
+        else:
+            print(f"No data found for the given animal name {animal_name}. Please try again.")
+
 
 if __name__ == "__main__":
     main()
