@@ -11,6 +11,8 @@ The Animal Information Web Generator is a Python-based application that fetches 
 - Includes additional animal characteristics if available.
 - Generates an HTML file with a clean and user-friendly design.
 
+<img width="1107" alt="Bildschirmfoto 2025-03-13 um 15 24 07" src="https://github.com/user-attachments/assets/2307f9ed-5ffe-4753-82fa-4aca4dc4f115" />
+
 ## Requirements
 
 - Python 3.x
