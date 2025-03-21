@@ -1,5 +1,6 @@
 from data_fetcher import fetch_data
 
+
 def string_creator(animal_data):
     """
     Create a string with the animal data to be inserted in the HTML template.
@@ -13,10 +14,15 @@ def string_creator(animal_data):
             <ul>
         """
         for key, value in animal['characteristics'].items():
-            animals_string += f"<li><strong>{key.replace('_', ' ').title()}</strong>: {value}</li>"
+            animals_string += ( f"<li><strong>{key.replace('_', ' ').title()}"
+                                f"</strong>: {value}</li>"
+                                )
+
 
         for key, value in animal['taxonomy'].items():
-            animals_string += f"<li><strong>{key.replace('_', ' ').title()}</strong>: {value}</li>"
+            animals_string += ( f"<li><strong>{key.replace('_', ' ').title()}"
+                                f"</strong>: {value}</li>"
+                                )
 
         animals_string += f"""
               <li><strong>Locations</strong>: {', '.join(animal['locations'])}</li>
