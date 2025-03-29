@@ -37,7 +37,7 @@ def html_replacer(animals_data=None, error_message=None):
     """
     Replace the placeholder in the HTML template with the animal data or an error message.
     """
-    with open("animals_templates.html", "r") as html_object:
+    with open("animals_templates.html", "r", encoding='utf-8') as html_object:
         placeholder = html_object.read()
 
     if error_message:
@@ -45,7 +45,7 @@ def html_replacer(animals_data=None, error_message=None):
     else:
         new_content = placeholder.replace("__REPLACE_ANIMALS_INFO__", string_creator(animals_data))
 
-    with open("animals.html", "w") as new_file:
+    with open("animals.html", "w", encoding='utf-8') as new_file:
         new_file.write(new_content)
 
 
